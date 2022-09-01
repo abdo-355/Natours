@@ -1,3 +1,3 @@
 # Natours
 
-a demo travel website to
+a demo travel website
