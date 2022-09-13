@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "a demo travel website",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node-sass sass/main.scss css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdo-355/Natours.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdo-355/Natours/issues"
+  },
+  "homepage": "https://github.com/abdo-355/Natours#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
