@@ -4,7 +4,7 @@
   "description": "a demo travel website",
   "main": "index.js",
   "scripts": {
-    "compile": "node-sass sass/main.scss css/styles.css"
+    "compile": "node-sass sass/main.scss css/styles.css -w"
   },
   "repository": {
     "type": "git",
