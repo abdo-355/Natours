@@ -43,6 +43,7 @@
   &__input:placeholder-shown + &__label {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-4rem);
+    font-size: 1.5rem;
+    transform: translateY(-5rem);
   }
 }
