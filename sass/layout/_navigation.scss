@@ -13,11 +13,11 @@
     top: 6rem;
     right: 6rem;
     z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+
+    text-align: center;
+    cursor: pointer;
   }
 
   &__background {
@@ -50,6 +50,7 @@
     transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
+  // SHOW/HIDE NAVIGATION MENU
   &__checkbox:checked ~ &__background {
     transform: scale(60);
   }
@@ -106,6 +107,59 @@
       background-position: 100%;
       color: $color-primary;
       transform: translateX(2rem);
+    }
+  }
+
+  //icon
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-black-2;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__toggler:hover &__icon {
+    &::before {
+      top: -1rem;
+    }
+    &::after {
+      top: 1rem;
+    }
+  }
+
+  &__checkbox:checked + &__toggler &__icon {
+    background-color: transparent;
+
+    &::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(-135deg);
     }
   }
 }
