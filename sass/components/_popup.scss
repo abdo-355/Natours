@@ -12,5 +12,40 @@
     width: 75%;
     background-color: $color-white;
     box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+  }
+
+  &__left {
+    width: 33.3333333%;
+    display: table-cell;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+
+    // to remove the thin line beneath the image for chrome and edge
+    &:last-child {
+      margin-bottom: -1px;
+    }
+  }
+
+  &__right {
+    width: 66.6666667%;
+    display: table-cell;
+    vertical-align: middle;
+
+    padding: 3rem 5rem;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid $color-grey-light-2;
   }
 }
