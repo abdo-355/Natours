@@ -41,6 +41,10 @@
     &:not(:last-child) {
       margin-right: 1.5rem;
     }
+
+    @include responsive(tab-portrait) {
+      padding-bottom: 2rem;
+    }
   }
 
   &__link {
