@@ -2,8 +2,20 @@
   max-width: $grid-width;
   margin: 0 auto;
 
+  @include responsive(tab-portrait) {
+    max-width: 50%;
+  }
+
+  @include responsive(phone) {
+    max-width: 70%;
+  }
+
   &:not(:last-child) {
     margin-bottom: $vertical-space;
+
+    @include responsive(tab-portrait) {
+      margin-bottom: $vertical-space-small;
+    }
   }
 
   @include clear-fix;
@@ -13,6 +25,15 @@
 
     &:not(:last-child) {
       margin-right: $horizontal-space;
+
+      @include responsive(tab-portrait) {
+        margin-right: 0;
+        margin-bottom: $vertical-space-small;
+      }
+    }
+
+    @include responsive(tab-portrait) {
+      width: 100% !important;
     }
   }
   .col-1-of-2 {

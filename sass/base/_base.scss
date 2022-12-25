@@ -19,6 +19,10 @@ html {
     font-size: 50%;
   }
 
+  @include responsive(phone) {
+    font-size: 43.75%;
+  }
+
   @include responsive(big-desktop) {
     font-size: 75%;
   }
